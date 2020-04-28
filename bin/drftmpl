@@ -1,6 +1,7 @@
+#!python
+from argparse import ArgumentParser
 
 from drftmpl.main import run
-from argparse import ArgumentParser
 
 
 if __name__ == '__main__':
