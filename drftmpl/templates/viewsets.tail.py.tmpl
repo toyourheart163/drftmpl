@@ -1,0 +1,9 @@
+{% for model in models %}
+class {{ model|title }}ViewSet(ModelViewSet):
+    '''
+    _("{{ model|title }} ViewSet")
+    '''
+    queryset = {{ model|title }}.objects.all()
+    serializer_class = {{ model|title }}Serializer
+
+{% endfor %}

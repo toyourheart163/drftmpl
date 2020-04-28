@@ -1,0 +1,9 @@
+'''
+Auto genenel DRF ModelSerializer
+'''
+
+from rest_framework.serializers import ModelSerializer
+
+from .models import {% for model in models %}{{ model|title
+    }}{% if not loop.last %}, {% endif %}{% endfor %}
+

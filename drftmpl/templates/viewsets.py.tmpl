@@ -1,0 +1,11 @@
+'''
+Auto genenel DRF ModelViewSet
+'''
+
+from rest_framework.viewsets import ModelViewSet
+
+from .serializers import {% for model in models %}{{ model|title
+    }}Serializer{% if not loop.last %}, {% endif %}{% endfor %}
+from .models import {% for model in models %}{{ model|title
+    }}{% if not loop.last %}, {% endif %}{% endfor %}
+

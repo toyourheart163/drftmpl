@@ -1,0 +1,10 @@
+{% for model in models %}
+class {{ model|title }}Serializer(ModelSerializer):
+    '''
+    _("Serializer {{ model }} api")
+    '''
+    class Meta:
+        model = {{ model|title }}
+        fields = '__all__'
+
+{% endfor -%}

@@ -1,0 +1,3 @@
+{% for model in models -%}
+router.register('{{ model }}s', viewsets.{{ model|title }}ViewSet)
+{% endfor %}

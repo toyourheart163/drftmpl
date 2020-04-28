@@ -1,0 +1,9 @@
+'''
+Auto extends app urls
+'''
+
+from {{ app }} import router
+
+urlpatterns += [
+    path('api/', include(router.urls)),
+]

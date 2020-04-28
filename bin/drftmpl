@@ -1,0 +1,16 @@
+
+from drftmpl.main import run
+from argparse import ArgumentParser
+
+
+if __name__ == '__main__':
+    ag = ArgumentParser(description="add models to app")
+    ag.add_argument('-a', '--app', metavar='app', required=True)
+    ag.add_argument('-m', '--models', metavar='models', required=True, nargs='*')
+    tips = "add to urls\nfrom {app} import routers\npath('api/' include(routers.urls)\n"
+    args = ag.parse_args()
+    app = args.app
+    models = args.models
+    print(models, app)
+    run(models, app)
+

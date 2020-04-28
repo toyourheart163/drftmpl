@@ -1,0 +1,4 @@
+[flake8]
+exclude = build,.git,.tox,./django/conf/app_template/*,./tests/.env,./drftmpl/hi,./drftmpl/demo
+ignore = W504,W601
+max-line-length = 119
